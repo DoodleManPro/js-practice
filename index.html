@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Learning JS</title>
+</head>
+<body>
+    <div class="loader"><img src="images/cat.gif">
+        <audio src="images/music.mp3"></audio>
+    </div>
+    <div class="container">
+        <h2>Challenge 1: Your Age in Days</h2>
+        <div class="cont">
+            <button class="click-me">Click Me</button>
+            <button class="reset">Reset</button>
+        </div>
+        <div class="cont">
+            <h1>Your age in days:</h1><h1 class="result"></h1>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Challenge 2: Cat Generator</h2>
+        <button class="generate-btn">Generate</button>
+        <div class="cont-img">
+            <div class="row"> 
+            </div>
+        </div>
+    </div>
+    <div class="container rps">
+        <h2>Challenge 3: Rock Paper Scissors</h2>
+        <div class="cont intro">
+            <button class="rock">rock</button>
+            <button class="paper">paper</button>
+            <button class="scissors">scissors</button>
+        </div>
+        <h2 class="winner"></h2>
+        <div class="cont match">
+            <img src="images/rock.png" class="hands player-hand">
+            <img src="images/rock.png" class="hands computer-hand">
+        </div>
+        <div class="cont score-rps">
+            <div class="cont score-b p">
+                <h2>Player Score:</h2><h2 class="player-score">00</h2>
+            </div>
+            <div class="cont score-b c">
+                <h2>Computer Score:</h2><h2 class="computer-score">00</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container buttons">
+        <h2>Challenge 4: Color Changing Buttons</h2>
+        <select id="select" class="select">
+            <option value="reset">reset</option>
+            <option value="random">random</option>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+        </select>
+        <div class="cont btns">
+            <button class="wee">Wee!</button>
+            <button class="yahoo">Yahoo!</button>
+            <button class="google">Google!</button>
+            <button class="facebook">Facebook!</button>
+        </div>
+    </div>
+    <div class="container blackjack">
+        <h2>Challenge 5: Blackjack Game 🤯🤯</h2>
+        <h2 class="lets-play">Let's Play!</h2>
+        <div class="game-wrapper">
+            <div class="row row-1">
+                <div class="bj-box your-box">
+                    <div class="score">
+                        <h2>You: <span class="your-score">0</span></h2>
+                    </div>
+                    <div class="bj-card-row your-row">
+                    </div>
+                </div>
+                <div class="bj-box dealer-box">
+                    <div class="score">
+                        <h2>Dealer: <span class="dealer-score">0</span></h2>
+                    </div>
+                    <div class="bj-card-row dealer-row"></div>
+                </div>
+            </div>
+            <div class="row row-2">
+                <div class="blackjack-controls">
+                    <button class="hit wee bj-btns">HIT</button>
+                    <button class="stand google bj-btns">STAND</button>
+                    <button class="deal yahoo bj-btns">DEAL</button>
+                </div>
+            </div>
+            <div class="row row-3">
+                <table>
+                    <tr>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Draws</th>
+                    </tr>
+                    <tr>
+                        <td class="wins">0</td>
+                        <td class="losses">0</td>
+                        <td class="draws">0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container code">
+        <code>
+            <h1>This is serious</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, fugiat ipsum a inventore explicabo officiis similique nostrum repellat nemo quis aliquam quam. Doloribus inventore voluptate nesciunt atque nemo veniam porro!</p>
+            <br><br>
+            <p><h1>DoodleManPro_</h1></p>
+            <img src="images/cat.gif" class="roll">
+        </code>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/ageindays.js"></script>
+    <script src="./js/cat-gen.js"></script>
+    <script src="./js/sps.js"></script>
+    <script src="./js/button.js"></script>
+    <script src="./js/blackjack.js"></script>
+
+
+
+
+    //Loading:
+    <script>
+        let loader = document.querySelector('.loader')
+        let audio = document.querySelector('audio');
+        let image = document.querySelector('code img');
+        let heading = document.querySelector('code h1');
+
+        image.addEventListener('click', () => {
+            audio.play();
+        })
+        heading.addEventListener('click', () => {
+            audio.pause();
+        })
+        window.addEventListener("load", function() {
+            loader.classList.add('finish')
+        })
+    </script>
+</body>
+</html>
